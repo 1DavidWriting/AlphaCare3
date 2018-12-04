@@ -57,7 +57,7 @@ public class AdminController implements ActionListener {
             public void actionPerformed (ActionEvent ae){
                 Object obj = ae.getSource();
                 if (obj == view.getFrame().getPanel().getAddNewUserButton()){
-                    System.out.println("Add a new user");
+                    System.out.println("Adding a new user");
                 }
             }
         
