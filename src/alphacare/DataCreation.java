@@ -72,7 +72,7 @@ public class DataCreation {
     public void createAdmin() {
         
         this.setAdmin1(new Administrator(1, "Michael Jordan", "mjordan", "mj1"));
-            
+        admin1.setPatientList(patientList1);            
     }
     
     public void createPhysician(){

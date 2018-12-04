@@ -3,6 +3,7 @@ package alphacare;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 
 
 public class AdminController implements ActionListener {
@@ -57,14 +58,18 @@ public class AdminController implements ActionListener {
             public void actionPerformed (ActionEvent ae){
                 Object obj = ae.getSource();
                 if (obj == view.getFrame().getPanel().getAddNewUserButton()){
-                    System.out.println("Now add a new user");
+                    System.out.println("Adding a new patient");
+                    LocalDate happyBirthday = LocalDate.of(1996, 4, 13);
+                    Patient newPatient = new Patient(2, "new", "new", "new", happyBirthday);
+                    admin.getPatientList().addPatient(newPatient);
+                    admin.getPatientList().savePatientList();
                 }
             }
         
         });
     }
     //action performed necessary for implementing action listener interface
-    @Override
+ 
     public void actionPerformed(ActionEvent event) 
     {       	
     }
